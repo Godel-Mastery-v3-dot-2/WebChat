@@ -1,5 +1,27 @@
-body{
-    background-color:#e6e6fa;
-    min-width:1000px;
-   }
-    
+body {
+  background-color: #e6e6fa;
+  min-width: 500px;
+}
+
+.navbar {
+  background: #b14c6eda;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  min-height: 60px;
+  padding: 4px 0;
+  position: relative;
+}
+
+.navbar-brand {
+  color: #e6e6fa;
+  float: left;
+  font-family: Lobster, cursive;
+  font-size: 30px;
+  line-height: 20px;
+  padding: 15px 15px;
+}
+
+.navbar-brand, .chat_pic {
+  float: left;
+  margin: 0 10px;
+}
