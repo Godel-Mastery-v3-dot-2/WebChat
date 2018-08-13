@@ -1,0 +1,25 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="wrap-entrance">
+      <span class="form-title">
+        Entrance
+      </span>
+      <div class="wrap-input">
+        <input id="name" class="input" type="text" formControlName="name" placeholder="Login" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+        <span class="focus-input"></span>
+      </div>
+      <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+          <div class="error-message" *ngIf = "f.name.errors.required">Login is required</div>
+          <div class="error-message" *ngIf = "f.name.errors.minlength">Login must be at least 3 characters</div>
+          <div class="error-message" *ngIf = "f.name.errors.maxlength">Login should not be more than 20 characters</div>
+          <div class="error-message" *ngIf = "f.name.hasError('userAlreadyExist')">User with the same name is already exist</div>
+      </div>
+      <div class="container-entrance-form-btn">
+        <button class="signin-form-btn">
+          <span>
+            <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+            Sign in
+          </span>
+        </button>
+      </div>
+    </div>
+  </form>
