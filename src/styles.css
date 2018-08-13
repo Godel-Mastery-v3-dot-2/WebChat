@@ -1,8 +1,10 @@
 body{
     background-color:#e6e6fa;
+    min-width:1000px;
+    width: auto !important;
+    width:1000px;
    } 
   .navbar {
-    border: none;
     background: #b14c6eda;
     padding: 4px 0;
     border-radius: 10px;
